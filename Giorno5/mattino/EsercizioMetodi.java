@@ -10,7 +10,7 @@ public class Esercizio {
 		//Es1: il metodo somma dichiarato sotto la funzione main e richiamato nell'es2
 		//prende in input due parametri di tipo intero (x e y) e ne restituisce la somma,
 		//sempre sotto forma di intero
-		System.out.println("ESERCIZIO 1 - SOMMA");
+		System.out.println("ESERCIZIO 1-2 - SOMMA");
 		System.out.println("Inserisci il primo valore");
 		int v1 = Integer.valueOf(in.nextLine().trim());
 		System.out.println("Inserisci il secondo valore");
@@ -18,11 +18,11 @@ public class Esercizio {
 		System.out.println("Es1: " + somma(v1,v2));
 		System.out.println("Es2: " + somma(5,7));
 		
-		//Es2: nel metodo chiamato media prendo in input un array di interi x come parametro
+		//Es3: nel metodo chiamato media prendo in input un array di interi x come parametro
 		//dopodiché creo una variabile somma che parte da 0 e tramite un ciclo for prendo
 		//tutti i valori di x e li sommo alla variabile iniziale, infine ritorno la media
 		//calcolata dividendo la somma per la lunghezza dell'array
-		System.out.println("ESERCIZIO 2 - MEDIA");
+		System.out.println("ESERCIZIO 3-4 - MEDIA");
 		String risp = "";
 		ArrayList<Integer> t = new ArrayList<Integer>();
 		do {
@@ -33,19 +33,19 @@ public class Esercizio {
 			
 		}while(!risp.equals("q"));
 		int[] temp = {2, 4, 6, 8, 10};
-		System.out.println("Es2: " + media(t.stream().mapToInt(i -> i).toArray()));
-		System.out.println("Es3: " + media(temp));
+		System.out.println("Es3: " + media(t.stream().mapToInt(i -> i).toArray()));
+		System.out.println("Es4: " + media(temp));
 		
-		//Es4: nel metodo inverti prendo in input una stringa x come parametro, creo quindi 
+		//Es5: nel metodo inverti prendo in input una stringa x come parametro, creo quindi 
 		//una variabile di tipo stringa chiamata s dove andrò a creare la stringa invertita
 		//e un array di char y ricavato dalla Stringa tramite la funzione x.toCharArray(), 
 		//infine ciclo tramite un for partendo dall'ultimo valore dell'array e arrivando a zero
 		//creando man mano la stringa invertita con l'operatore += 
-		System.out.println("ESERCIZIO 4 - STRINGA INVERTITA");
+		System.out.println("ESERCIZIO 5-6 - STRINGA INVERTITA");
 		System.out.println("Inserisci la stringa da invertire");
 		String inv = in.nextLine().trim();
-		System.out.println("Es4: " + inverti(inv));
-		System.out.println("Es5: " + inverti("ciao"));
+		System.out.println("Es5: " + inverti(inv));
+		System.out.println("Es6: " + inverti("ciao"));
 	}
 	
 	public static int somma(int x, int y) {
