@@ -57,7 +57,8 @@ INSERT INTO Film(titolo, annoProduzione, nazionalita, lingua, registaRIF) VALUES
 ("prova", 2000, "efjie", "italiano", 1),
 ("wawdwqd", 2200, "q3oijrqjfe", "russo", 2);
 
+INSERT INTO Dvd(posizioneVideoteca, filmRIF) VALUES 
+ 
 
 
-
-SELECT * FROM Regista;
+SELECT * FROM Film;
