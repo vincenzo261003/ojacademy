@@ -1,4 +1,4 @@
-package HibernateLibro.Task01;
+package Task01.HibernateLibro;
 
 /**
  * Hello world!
