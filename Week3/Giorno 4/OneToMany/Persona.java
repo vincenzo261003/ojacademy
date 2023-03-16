@@ -85,10 +85,20 @@ public class Persona {
 		this.email = email;
 	}
 
+	public String dettaglioPersona() {
+		return "Persona [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", codice_fiscale=" + codice_fiscale + ", email=" + email + 
+				"]";
+	}
+	
 	@Override
 	public String toString() {
-		return "Persona [idPersona=" + idPersona + ", nome=" + nome + ", cognome=" + cognome + ", cf=" + cf + ", email="
-				+ email + "]";
+		String elenco = "";
+		for(CartaFedelta car: elenco_carte)
+			elenco += car.dettaglioCarta() + "\n";
+		
+		
+		return "Persona [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", codice_fiscale=" + codice_fiscale + ", email=" + email + 
+				", elenco_carte=" + elenco + "]";
 	}
 	
 	

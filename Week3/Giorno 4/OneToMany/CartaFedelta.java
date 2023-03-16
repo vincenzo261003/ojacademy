@@ -71,4 +71,14 @@ public class CartaFedelta {
 		this.negozio = negozio;
 	}
 	
+	public String dettaglioCarta() {
+		return "CartaFedelta [id=" + id + ", codice=" + codice + ", negozio=" + negozio + "]";
+	}
+	
+	@Override
+	public String toString() {
+		return "CartaFedelta [id=" + id + ", codice=" + codice + ", negozio=" + negozio + ", proprietario="
+				+ proprietario.dettaglioPersona() + "]";
+	}
+	
 }
