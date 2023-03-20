@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questo è il titolo della pagina</title>
+</head>
+<style>
+    @-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+
+@keyframes rainbow-bg{
+		100%,0%{
+			background-color: rgb(255,0,0);
+		}
+		8%{
+			background-color: rgb(255,127,0);
+		}
+		16%{
+			background-color: rgb(255,255,0);
+		}
+		25%{
+			background-color: rgb(127,255,0);
+		}
+		33%{
+			background-color: rgb(0,255,0);
+		}
+		41%{
+			background-color: rgb(0,255,127);
+		}
+		50%{
+			background-color: rgb(0,255,255);
+		}
+		58%{
+			background-color: rgb(0,127,255);
+		}
+		66%{
+			background-color: rgb(0,0,255);
+		}
+		75%{
+			background-color: rgb(127,0,255);
+		}
+		83%{
+			background-color: rgb(255,0,255);
+		}
+		91%{
+			background-color: rgb(255,0,127);
+		}
+}
+
+.rainbow-bg{
+		animation: rainbow-bg 2.5s linear;
+		animation-iteration-count: infinite;
+}
+</style>
+<body class="rainbow-bg">
+    <img class="rotating" style="text-align: center;" width="200px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Stormtrooper-e11.jpg/640px-Stormtrooper-e11.jpg" />
+    <ol>
+        <li>&lt;html&gt; tag principale che contiene tutto il doc html</li>
+        <li>&lt;head&gt; contiene informazioni sulla pagina che non vengono visualizzati</li>
+        <li>&lt;body&gt; contiene il contenuto della pagina</li>
+        <li>&lt;h1&gt; tag di head (font grande)</li>
+        <li>&lt;p&gt; paragrafo</li>
+        <li>&lt;b&gt; o &lt;strong&gt; grassetto</li>
+        <li>&lt;sup&gt; testo <sup>sopraelevato</sup></li>
+        <li>&lt;img&gt; per inserire immagini</li>
+        <li>&lt;ol&gt; lista ordinata</li>
+        <li>&lt;ul&gt; lista non ordinata</li>
+        <li>&lt;li&gt; elemento di una lista</li>
+        <li>&lt;a&gt; link esterno</li>
+    </ol>
+</body>
+</html>
