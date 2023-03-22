@@ -1,7 +1,6 @@
 package com.ospedale.Task03.models;
 
 import java.sql.Date;
-import java.time.LocalDateTime;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
@@ -81,14 +80,6 @@ public class Visita {
 
 	public void setDatavisita(Date datavisita) {
 		this.datavisita = datavisita;
-	}
-
-	public void genCodice() {
-		this.codice = java.util.UUID.randomUUID().toString();
-	}
-
-	public void genSecret() {
-		this.secret = java.util.UUID.randomUUID().toString();
 	}
 
 	public Persona getPaziente() {

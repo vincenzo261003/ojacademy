@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -34,8 +35,7 @@ public class Persona {
 	private String codicefiscale;
 	
 	@OneToMany(mappedBy = "paziente", fetch = FetchType.LAZY)
-	@JsonBackReference
-	@JsonIgnore
+	@JsonManagedReference
 	private List<Visita> elencoVisite = new ArrayList<Visita>();
 	
 	public Persona() {}

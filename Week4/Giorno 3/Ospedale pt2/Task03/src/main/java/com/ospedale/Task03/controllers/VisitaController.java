@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ospedale.Task03.dto.VisitaDto;
 import com.ospedale.Task03.models.Visita;
 import com.ospedale.Task03.services.VisitaService;
 
@@ -25,7 +26,7 @@ public class VisitaController {
 	private VisitaService service;
 	
 	@PostMapping
-	public Visita insVisita(@RequestBody Visita objStud) {
+	public VisitaDto insVisita(@RequestBody VisitaDto objStud) {
 		objStud.genCodice();
 		objStud.genSecret();
 		return service.inserisciVisita(objStud);
@@ -38,6 +39,25 @@ public class VisitaController {
 		
 		return service.trovaVisita(varID);
 	}
+	
+	@GetMapping("/all")
+	public List<VisitaDto> allVisite(){
+		return service.listaVisite();
+	}
+	
+	@DeleteMapping("/{varID}")
+	public boolean elimVisita(@PathVariable Integer varID) {
+		return service.eliminaVisita(varID);
+	}
+	
+	@PutMapping("/{varID}")
+	public Visita modVisita(@PathVariable Integer varID, @RequestBody Visita objStu) {
+		if (varID == null || varID < 0)
+			return null;
+
+		return service.aggiornaVisita(varID, objStu);
+	}	
+	
 	
 //	@GetMapping("/secret")
 //	public Visita trovaVisitaSecret(@RequestParam String codice, @RequestParam String secret) {
@@ -61,23 +81,5 @@ public class VisitaController {
 //		
 //		return service.trovaVisitaCF(varCF);
 //	} 
-	
-	@GetMapping("/all")
-	public List<Visita> allVisite(){
-		return service.listaVisite();
-	}
-	
-	@DeleteMapping("/{varID}")
-	public boolean elimVisita(@PathVariable Integer varID) {
-		return service.eliminaVisita(varID);
-	}
-	
-	@PutMapping("/{varID}")
-	public Visita modVisita(@PathVariable Integer varID, @RequestBody Visita objStu) {
-		if (varID == null || varID < 0)
-			return null;
-
-		return service.aggiornaVisita(varID, objStu);
-	}	
 
 }

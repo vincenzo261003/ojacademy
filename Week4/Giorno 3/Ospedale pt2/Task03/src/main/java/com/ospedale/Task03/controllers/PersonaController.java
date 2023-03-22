@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ospedale.Task03.dto.PersonaDto;
 import com.ospedale.Task03.models.Persona;
 import com.ospedale.Task03.services.PersonaService;
 
@@ -23,7 +24,7 @@ public class PersonaController {
 	private PersonaService service;
 	
 	@PostMapping
-	public Persona insVisita(@RequestBody Persona objStud) {
+	public PersonaDto insPersona(@RequestBody PersonaDto objStud) {
 		return service.inserisciPersona(objStud);
 	}
 	
@@ -36,7 +37,7 @@ public class PersonaController {
 	}
 
 	@GetMapping("/all")
-	public List<Persona> allPersone(){
+	public List<PersonaDto> allPersone(){
 		return service.listaPersone();
 	}
 	
