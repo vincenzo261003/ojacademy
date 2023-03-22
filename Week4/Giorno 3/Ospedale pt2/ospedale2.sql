@@ -6,7 +6,7 @@ CREATE TABLE Persone(
     idPersona INTEGER PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(250) NOT NULL,
     cognome VARCHAR(250) NOT NULL,
-    codiceFiscale VARCHAR(16) NOT NULL
+    codiceFiscale VARCHAR(16) NOT NULL UNIQUE
 );
  
 CREATE TABLE Visite(
