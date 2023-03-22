@@ -1,0 +1,22 @@
+DROP DATABASE IF EXISTS ospedale;
+CREATE DATABASE ospedale;
+USE ospedale;
+
+CREATE TABLE Persona(
+    idPersona INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(250) NOT NULL,
+    cognome VARCHAR(250) NOT NULL,
+    codiceFiscale VARCHAR(16) NOT NULL
+);
+ 
+CREATE TABLE Visite(
+    idVisita INTEGER PRIMARY KEY AUTO_INCREMENT,
+    codice VARCHAR(36) NOT NULL UNIQUE,
+    secret VARCHAR(36) NOT NULL,
+    esito LONGTEXT,
+    dataVisita DATE,
+    personaRIF INTEGER,
+    FOREIGN KEY (personaRIF) REFERENCES Persona(idPersona) ON DELETE CASCADE
+);
+
+SELECT * FROM Visite;
