@@ -1,0 +1,473 @@
+{
+	"info": {
+		"_postman_id": "75fa20df-34ff-4ddf-b281-11fa5b479804",
+		"name": "Ojacademy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Studente",
+			"item": [
+				{
+					"name": "PostStudente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nominativo\": \"prova due\",\r\n    \"matricola\": \"0I124\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/studente",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"studente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetStudente",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nominativo\": \"prova uno\",\r\n    \"matricola\": \"0I123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/studente/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"studente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetStudenti",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nominativo\": \"prova uno\",\r\n    \"matricola\": \"0I123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/studente/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"studente",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DelStudente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nominativo\": \"prova uno\",\r\n    \"matricola\": \"0I123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/studente/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"studente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdStudente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nominativo\": \"prova x2\",\r\n    \"matricola\": \"0I21\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/studente/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"studente",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ospedale",
+			"item": [
+				{
+					"name": "GetVisita",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nominativo\": \"prova uno\",\r\n    \"matricola\": \"0I123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ospedale/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ospedale",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetVisite",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nominativo\": \"prova uno\",\r\n    \"matricola\": \"0I123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ospedale/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ospedale",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostVisita",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nominativo\": \"Prova x\",\r\n    \"codicefiscale\": \"12312323\",\r\n    \"esito\": \"wgwrgrggr\",\r\n    \"datavisita\": \"2012-04-23\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ospedale",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ospedale"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DelStudente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nominativo\": \"prova uno\",\r\n    \"matricola\": \"0I123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ospedale/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ospedale",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdStudente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nominativo\": \"prova x2\",\r\n    \"matricola\": \"0I21\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ospedale/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ospedale",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetVisitaByCF",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nominativo\": \"prova uno\",\r\n    \"matricola\": \"0I123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ospedale/CF/12312323",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ospedale",
+								"CF",
+								"12312323"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetVisitaByDate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nominativo\": \"prova uno\",\r\n    \"matricola\": \"0I123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ospedale/data?date=2012-04-23",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ospedale",
+								"data"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2012-04-23"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetVisiteByDates",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nominativo\": \"prova uno\",\r\n    \"matricola\": \"0I123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ospedale/date?startDate=2012-04-23&endDate=2012-04-23",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ospedale",
+								"date"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2012-04-23"
+								},
+								{
+									"key": "endDate",
+									"value": "2012-04-23"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetVisiteBySecret",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nominativo\": \"prova uno\",\r\n    \"matricola\": \"0I123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ospedale/secret?codice=46270e01-b2d7-4171-9888-a36196cbc653&secret=1b471487-3cda-4afe-8631-df734a3d12a1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ospedale",
+								"secret"
+							],
+							"query": [
+								{
+									"key": "codice",
+									"value": "46270e01-b2d7-4171-9888-a36196cbc653"
+								},
+								{
+									"key": "secret",
+									"value": "1b471487-3cda-4afe-8631-df734a3d12a1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080",
+			"type": "default"
+		}
+	]
+}
