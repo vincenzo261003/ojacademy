@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS ospedale;
 CREATE DATABASE ospedale;
 USE ospedale;
 
-CREATE TABLE Persona(
+CREATE TABLE Persone(
     idPersona INTEGER PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(250) NOT NULL,
     cognome VARCHAR(250) NOT NULL,
@@ -16,7 +16,12 @@ CREATE TABLE Visite(
     esito LONGTEXT,
     dataVisita DATE,
     personaRIF INTEGER,
-    FOREIGN KEY (personaRIF) REFERENCES Persona(idPersona) ON DELETE CASCADE
+    FOREIGN KEY (personaRIF) REFERENCES Persone(idPersona) ON DELETE CASCADE
 );
 
-SELECT * FROM Visite;
+INSERT INTO Persone(nome, cognome, codiceFiscale) VALUE ("prova", "prova 1", "123456");
+
+INSERT INTO Visite(codice, secret, esito, dataVisita, personaRIF) VALUE ("12143", "343214", "fewef", "2000-12-22", 1);
+
+SELECT * FROM Visite
+JOIN Persone ON Persone.idPersona = personaRIF;
