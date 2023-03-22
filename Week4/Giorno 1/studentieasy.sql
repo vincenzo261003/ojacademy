@@ -9,3 +9,5 @@ CREATE TABLE Studenti(
 );
 
 SELECT * FROM Studenti;
+
+INSERT INTO Studenti(nominativo, matricola) VALUE ("Prova", "12456");
