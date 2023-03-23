@@ -28,8 +28,14 @@ public class PersonaService {
 		return modelMapper.map(x, PersonaDto.class);
 	}
 	
-	public Persona trovaPersona(Integer id) {
-		return repository.findById(id).orElse(null);
+	public PersonaDto trovaPersona(Integer id) {
+		
+		Persona temp = repository.findById(id).orElse(null);
+		
+		if (temp == null)
+			return null;
+		
+		return modelMapper.map(temp, PersonaDto.class);
 	}
 	
 	public List<PersonaDto> listaPersone() {
@@ -55,10 +61,14 @@ public class PersonaService {
 		return true;
 	}
 	
-	public Persona aggiornaPersona(Integer varID, Persona stu) {
-		if (this.trovaPersona(varID) == null)
-			return null;
-		return repository.save(stu);
+	public PersonaDto aggiornaPersona(Integer varID, PersonaDto stu) {
+		Persona temp = repository.findById(varID).orElse(null);
+		if (temp == null)
+			return null;		
+		Persona p = modelMapper.map(stu, Persona.class);
+		p.setCodicefiscale(temp.getCodicefiscale());
+		p.setIdpersona(temp.getIdpersona());
+		return modelMapper.map(repository.save(p), PersonaDto.class);
 	}
 	
 }

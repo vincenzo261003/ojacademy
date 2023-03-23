@@ -25,3 +25,5 @@ INSERT INTO Visite(codice, secret, esito, dataVisita, personaRIF) VALUE ("12143"
 
 SELECT * FROM Visite
 JOIN Persone ON Persone.idPersona = personaRIF;
+
+SELECT * FROM Persone;

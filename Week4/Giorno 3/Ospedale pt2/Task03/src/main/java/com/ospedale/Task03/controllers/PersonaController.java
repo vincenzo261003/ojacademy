@@ -29,7 +29,7 @@ public class PersonaController {
 	}
 	
 	@GetMapping("/{varID}")
-	public Persona trovaPersona(@PathVariable Integer varID) {
+	public PersonaDto trovaPersona(@PathVariable Integer varID) {
 		if (varID == null || varID < 0)
 			return null;
 		
@@ -47,7 +47,7 @@ public class PersonaController {
 	}
 	
 	@PutMapping("/{varID}")
-	public Persona modPersona(@PathVariable Integer varID, @RequestBody Persona objStu) {
+	public PersonaDto modPersona(@PathVariable Integer varID, @RequestBody PersonaDto objStu) {
 		if (varID == null || varID < 0)
 			return null;
 
