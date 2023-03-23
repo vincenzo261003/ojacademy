@@ -82,13 +82,18 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/studente/all",
+							"raw": "{{url}}/studente?nominativo=Prova",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"studente",
-								"all"
+								"studente"
+							],
+							"query": [
+								{
+									"key": "nominativo",
+									"value": "Prova"
+								}
 							]
 						}
 					},
@@ -151,7 +156,157 @@
 			]
 		},
 		{
-			"name": "Ospedale",
+			"name": "Ospedale-Persone",
+			"item": [
+				{
+					"name": "GetPersona",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nominativo\": \"prova uno\",\r\n    \"matricola\": \"0I123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ospedale/persone/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ospedale",
+								"persone",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPersone",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nominativo\": \"prova uno\",\r\n    \"matricola\": \"0I123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ospedale/persone/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ospedale",
+								"persone",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostPersona",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"212323\",\r\n    \"cognome\": \"213231\",\r\n    \"codicefiscale\": \"efwfewf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ospedale/persone",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ospedale",
+								"persone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DelPersona",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nominativo\": \"prova uno\",\r\n    \"matricola\": \"0I123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ospedale/persone/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ospedale",
+								"persone",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdPersona",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"prova 314x2\",\r\n    \"cognome\": \"prova x31142\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ospedale/persone/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ospedale",
+								"persone",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ospedale Copy",
 			"item": [
 				{
 					"name": "GetVisita",
@@ -201,12 +356,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/ospedale/all",
+							"raw": "{{url}}/ospedale/visite/all",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"ospedale",
+								"visite",
 								"all"
 							]
 						}
@@ -220,7 +376,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nominativo\": \"Prova x\",\r\n    \"codicefiscale\": \"12312323\",\r\n    \"esito\": \"wgwrgrggr\",\r\n    \"datavisita\": \"2012-04-23\"\r\n}",
+							"raw": "{\r\n    \"nominativo\": \"Prova x\",\r\n    \"codicefiscale\": \"12312323\",\r\n    \"esito\": \"wgwrgrggr\",\r\n    \"datavisita\": \"2012-04-23\",\r\n    \"paziente\": 3\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -228,12 +384,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/ospedale",
+							"raw": "{{url}}/ospedale/visite",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"ospedale"
+								"ospedale",
+								"visite"
 							]
 						}
 					},
