@@ -39,3 +39,4 @@ Risorse corso OJxSI(IBM) Full Stack
 
 ### Thymeleaf 
  - [Primo test](https://github.com/vincenzo261003/ojacademy/tree/main/Week4/Giorno%204/task00ThymeLeaf)
+ - [Task gestione palestra (TL+JPA)](https://github.com/vincenzo261003/ojacademy/tree/main/Week4/Giorno%205/GestionePalestra)
