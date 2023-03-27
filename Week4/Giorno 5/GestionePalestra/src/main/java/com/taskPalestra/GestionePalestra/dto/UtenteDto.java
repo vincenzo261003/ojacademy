@@ -6,6 +6,7 @@ public class UtenteDto {
 	private String cognome;
 	private String email;
 	private String pass;
+	private boolean isadmin;
 
 	public String getNome() {
 		return nome;
@@ -37,6 +38,14 @@ public class UtenteDto {
 
 	public void setPass(String pass) {
 		this.pass = pass;
+	}
+
+	public boolean isIsadmin() {
+		return isadmin;
+	}
+
+	public void setIsadmin(boolean isadmin) {
+		this.isadmin = isadmin;
 	}
 	
 }

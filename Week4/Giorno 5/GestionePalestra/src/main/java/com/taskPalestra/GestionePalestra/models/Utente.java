@@ -40,6 +40,17 @@ public class Utente {
 	@Column
 	private String pass;
 	
+	@Column
+	private boolean isadmin;
+	
+	public boolean isIsadmin() {
+		return isadmin;
+	}
+
+	public void setIsadmin(boolean isadmin) {
+		this.isadmin = isadmin;
+	}
+
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable( name="personacorso", 
 		joinColumns = { @JoinColumn(name="idutenterif", referencedColumnName = "idutente") },

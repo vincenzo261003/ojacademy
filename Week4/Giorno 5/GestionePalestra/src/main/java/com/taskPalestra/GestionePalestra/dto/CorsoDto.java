@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CorsoDto {
 
+	private String codice;
 	private String nome;
 	private Integer duratacorso;
 	private LocalDateTime datacorso;
@@ -56,6 +57,14 @@ public class CorsoDto {
 
 	public void setElenco_iscritti(List<UtenteDto> elenco_iscritti) {
 		this.elenco_iscritti = elenco_iscritti;
+	}
+
+	public String getCodice() {
+		return codice;
+	}
+
+	public void setCodice(String codice) {
+		this.codice = codice;
 	}
 	
 }

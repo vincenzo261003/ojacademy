@@ -31,6 +31,9 @@ public class Corso {
 	private Integer idcorso;
 	
 	@Column
+	private String codice;
+	
+	@Column
 	private String nome;
 	
 	@Column
@@ -97,6 +100,14 @@ public class Corso {
 
 	public void setElenco_iscritti(List<Utente> elenco_iscritti) {
 		this.elenco_iscritti = elenco_iscritti;
+	}
+
+	public String getCodice() {
+		return codice;
+	}
+
+	public void setCodice(String codice) {
+		this.codice = codice;
 	}
 	
 }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Utente</title>
+</head>
+<body>
+    <div class="container mt-3" th:if="${inserimento}">
+    
+    	<h1>Registrazione utente</h1>
+
+		<form method="POST" th:action="@{/palestra/utenti}" th:object="${utente}">
+	        <div class="form-group">
+	            <label>Nome:</label>
+	            <input type="text" class="form-control" th:field="*{nome}"/>
+	        </div>
+
+            <div class="form-group">
+	            <label>Cognome:</label>
+	            <input type="text" class="form-control" th:field="*{cognome}"/>
+	        </div>
+	
+	        <div class="form-group">
+	            <label>Email:</label>
+	            <input type="text" class="form-control" th:field="*{email}"/>
+	        </div>
+
+            <div class="form-group">
+	            <label>Password:</label>
+	            <input type="text" class="form-control" th:field="*{pass}"/>
+	        </div>
+	        
+	        <button type="submit" class="btn btn-primary">Salva</button>
+        </form>
+
+    </div>
+    
+    <div class="container mt-3" th:if="${!inserimento}">
+    
+    	<h1>Modifica Studente</h1>
+
+		<form method="POST" th:action="@{/palestra/utenti}" th:object="${utente}">
+            <div class="form-group">
+	            <label>Nome:</label>
+	            <input type="text" class="form-control" th:field="*{nome}"/>
+	        </div>
+
+            <div class="form-group">
+	            <label>Cognome:</label>
+	            <input type="text" class="form-control" th:field="*{cognome}"/>
+	        </div>
+	
+	        <div class="form-group">
+	            <label>Email:</label>
+	            <input type="text" class="form-control" th:field="*{email}" readonly/>
+                <span>La modifica dell'email non è permessa</span>
+	        </div>
+
+            <div class="form-group">
+	            <label>Password:</label>
+	            <input type="text" class="form-control" th:field="*{pass}"/>
+	        </div>
+	        
+	        <button type="submit" class="btn btn-primary">Modifica</button>
+        </form>
+
+    </div>
+</body>
+</html>

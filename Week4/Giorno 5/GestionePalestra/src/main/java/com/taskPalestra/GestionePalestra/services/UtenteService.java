@@ -32,6 +32,13 @@ public class UtenteService {
 		return modelMapper.map(temp, UtenteDto.class);
 	}
 	
+	public UtenteDto cercaUtenteEmail(String email) {
+		Utente temp = repository.findByEmail(email).orElse(null);
+		if (temp == null)
+			return null;
+		return modelMapper.map(temp, UtenteDto.class);
+	}
+	
 	public List<UtenteDto> ottieniUtenti(){
 		List<Utente> x = repository.findAll();
 		List<UtenteDto> elenco = new ArrayList<>();
@@ -46,6 +53,14 @@ public class UtenteService {
 		if (this.cercaUtenteId(id) == null)
 			return false;
 		repository.deleteById(id);
+		return true;
+	}
+	
+	public boolean eliminaUtenteEmail(String email) {
+		Utente temp = repository.findByEmail(email).orElse(null);
+		if (temp == null)
+			return false;
+		repository.delete(temp);
 		return true;
 	}
 	
