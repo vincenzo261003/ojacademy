@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+    <div class="container">
+        <form method="post" id="test" action="http://localhost:8080/utenti/inserisci">
+            <div class="form-group">
+                <label>Nome:</label>
+                <input type="text" class="form-control" name="nome"/>
+            </div>
+            <div class="form-group">
+                <label>Cognome:</label>
+                <input type="text" class="form-control" name="cognome"/>
+            </div>
+            <div class="form-group">
+                <label>DataNascita:</label>
+                <input type="text" class="form-control" name="nascita"/>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+
+    <script>
+        const sampleForm = document.getElementById("test");
+        sampleForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        let form = e.currentTarget;
+        let url = form.action;
+        try {
+            let formData = new FormData(form);
+            let responseData = await postFormFieldsAsJson({ url, formData });
+            console.log(responseData);
+        } catch (error) {
+            console.error(error);
+        }
+        });
+
+        async function postFormFieldsAsJson({ url, formData }) {
+            let formDataObject = Object.fromEntries(formData.entries());
+            let fetchOptions = {
+                method: "POST",
+                mode: "cors",
+                credentials: "include",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "*",
+                },
+                body: JSON.stringify(formDataObject),
+            };
+            let res = await fetch(url, fetchOptions);
+            if (res.ok) {
+                let text = await res.text();
+                return text;
+            } else {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+        }
+
+
+    </script>
+</body>
+</html>
