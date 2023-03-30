@@ -13,9 +13,9 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import com.taskCondominio.Gestione.condomini.dto.UtenteDto;
 import com.taskCondominio.Gestione.condomini.services.CondominioService;
 import com.taskCondominio.Gestione.condomini.services.UtenteService;
+import com.taskCondominio.Gestione.condomini.utils.GestioneAutenticazione;
 
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/condomini/utenti")
@@ -27,10 +27,13 @@ public class UtenteControllerWeb {
 	
 	@Autowired
 	private CondominioService service2;
+	
+	@Autowired
+	private GestioneAutenticazione g;
 
 	@GetMapping("/aggiungi/{varCondominio}")
 	public String inserisciInquilino(@PathVariable String varCondominio, Model model, HttpServletRequest request) {
-		if (! checkAutenticazione(request, 1))
+		if (! g.checkAutenticazione(request, 1))
 			return "errorPermessi";
 		
 		UtenteDto u = new UtenteDto();
@@ -48,7 +51,7 @@ public class UtenteControllerWeb {
 	
 	@GetMapping("/elimina/{varAppartamento}")
 	public String eliminaInquilino(@PathVariable String varAppartamento, HttpServletRequest request) {
-		if (! checkAutenticazione(request, 1))
+		if (! g.checkAutenticazione(request, 1))
 			return "errorPermessi";
 		
 		String varCondominio = service.cercaUtenteUsername(varAppartamento).getCondominio().getCodice();
@@ -61,7 +64,7 @@ public class UtenteControllerWeb {
 	
 	@GetMapping("/modifica/{varAppartamento}")
 	public String modInquilino(@PathVariable String varAppartamento, HttpServletRequest request, Model model) {
-		if (! checkAutenticazione(request, 1))
+		if (! g.checkAutenticazione(request, 1))
 			return "errorPermessi";
 		model.addAttribute("utente", service.cercaUtenteUsername(varAppartamento));
 
@@ -76,30 +79,5 @@ public class UtenteControllerWeb {
 		return "redirect:/condomini/stabile/" + varCondominio;
 	}
 	
-	public boolean checkAutenticazione(HttpServletRequest req, int livello) {
-		HttpSession sessione = req.getSession();
-		
-		//Get utente check sessione
-		UtenteDto user = null;
-		try {
-			user = (UtenteDto)sessione.getAttribute("user");
-		} catch (Exception e) {
-			return false;
-		}
-		
-		//Return in base al livello richiesto
-		switch (livello) {
-			case 0:
-				return true;
-			case 1: 
-				if (user != null && user.isIsadmin())
-					return true;
-				else 
-					return false;
-		}
-		
-		//Errore?
-		return false;
-	}
 	
 }

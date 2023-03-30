@@ -13,6 +13,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import com.taskCondominio.Gestione.condomini.dto.CondominioDto;
 import com.taskCondominio.Gestione.condomini.dto.UtenteDto;
 import com.taskCondominio.Gestione.condomini.services.CondominioService;
+import com.taskCondominio.Gestione.condomini.utils.GestioneAutenticazione;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
@@ -24,10 +25,13 @@ public class CondominioControllerWeb {
 	
 	@Autowired
 	private CondominioService service;
+	
+	@Autowired
+	private GestioneAutenticazione g;
 
 	@GetMapping("/{varCondominio}")
 	public String modUtente(@PathVariable String varCondominio, Model model, HttpServletRequest request){	
-		if(! checkAutenticazione(request, varCondominio))
+		if(! g.checkAutenticazione2(request, varCondominio))
 			return "errorPermessi";
 		
 		HttpSession sessione = request.getSession();
@@ -42,7 +46,7 @@ public class CondominioControllerWeb {
 	
 	@GetMapping("/aggiungi")
 	public String aggCondominio(Model model, HttpServletRequest request){	
-		if(! checkAutenticazione2(request, 1))
+		if(! g.checkAutenticazione(request, 1))
 			return "errorPermessi";
 		
 		CondominioDto c = new CondominioDto();
@@ -59,7 +63,7 @@ public class CondominioControllerWeb {
 	
 	@GetMapping("/modifica/{varCondominio}")
 	public String modInquilino(@PathVariable String varCondominio, HttpServletRequest request, Model model) {
-		if (! checkAutenticazione2(request, 1))
+		if (! g.checkAutenticazione(request, 1))
 			return "errorPermessi";
 		model.addAttribute("condominio", service.cercaCondominioCodice(varCondominio));
 
@@ -74,54 +78,11 @@ public class CondominioControllerWeb {
 	
 	@GetMapping("/elimina/{varCodice}")
 	public String delCondominio(HttpServletRequest request, @PathVariable String varCodice){	
-		if(! checkAutenticazione2(request, 1))
+		if(! g.checkAutenticazione(request, 1))
 			return "errorPermessi";
 		if (! service.eliminaCondominioCodice(varCodice))
 			return "error";
 		return "redirect:/condomini/dashboard";
 	}
 	
-	public boolean checkAutenticazione(HttpServletRequest req, String codice) {
-		HttpSession sessione = req.getSession();
-		
-		//Get utente check sessione
-		UtenteDto user = null;
-		try {
-			user = (UtenteDto)sessione.getAttribute("user");
-		} catch (Exception e) {
-			return false;
-		}
-		
-		if(user != null && (user.getCondominio().getCodice().equals(codice) || user.isIsadmin()))
-			return true;
-		
-		//Errore?
-		return false;
-	}
-	
-	public boolean checkAutenticazione2(HttpServletRequest req, int livello) {
-		HttpSession sessione = req.getSession();
-		
-		//Get utente check sessione
-		UtenteDto user = null;
-		try {
-			user = (UtenteDto)sessione.getAttribute("user");
-		} catch (Exception e) {
-			return false;
-		}
-		
-		//Return in base al livello richiesto
-		switch (livello) {
-			case 0:
-				return true;
-			case 1: 
-				if (user != null && user.isIsadmin())
-					return true;
-				else 
-					return false;
-		}
-		
-		//Errore?
-		return false;
-	}
 }

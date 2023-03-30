@@ -5,13 +5,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.taskCondominio.Gestione.condomini.models.Avviso;
+import com.taskCondominio.Gestione.condomini.models.Condominio;
 import com.taskCondominio.Gestione.condomini.repositories.AvvisoRepository;
+import com.taskCondominio.Gestione.condomini.repositories.CondominioRepository;
 
 @Service
 public class AvvisoService {
 
 	@Autowired
 	AvvisoRepository repository;
+	
+	@Autowired
+	CondominioRepository repository2;
 	
 	public Avviso inserisciAvviso(Avviso c) {
 		return repository.save(c);
@@ -40,6 +45,12 @@ public class AvvisoService {
 			return null;		
 		c.setIdavviso(temp.getIdavviso());
 		return repository.save(c);
+	}
+
+	public void inserisciAvviso(Avviso objAvviso, String varCondominio) {
+		Condominio c = repository2.findByCodice(varCondominio).orElse(null);
+		objAvviso.setCondominio(c);
+		repository.save(objAvviso);
 	}
 
 	

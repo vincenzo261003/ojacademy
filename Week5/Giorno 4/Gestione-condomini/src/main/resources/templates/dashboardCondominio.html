@@ -13,11 +13,16 @@
 <body>
     <div class="container mt-3">
         <div class="row">
-            <h1 th:text="${condominio.nome}"></h1>
-            <h5>Indirizzo: <span th:text="${condominio.indirizzo}"></span></h5>
-            <h5>Codice: <span th:text="${condominio.codice}"></span></h5>
+            <div class="col-9">
+                <h1 th:text="${condominio.nome}"></h1>
+                <h5>Indirizzo: <span th:text="${condominio.indirizzo}"></span></h5>
+                <h5>Codice: <span th:text="${condominio.codice}"></span></h5>
+            </div>
+            <div class="col-2 my-auto">
+                <a th:if="${admin}" th:href="@{/condomini/dashboard}" class="btn btn-primary w-50">Back</a>
+            </div>
         </div>
-        <hr class="my-5">
+        <hr class="my-3">
         <div class="row">
             <div class="col-9">
                 <h1 class="mb-4">Lista inquilini</h1>
@@ -72,18 +77,14 @@
             <thead>
                 <th>Titolo</th>
                 <th>Data</th>
-                <th></th>
-                <th></th>
                 <th>Visualizza</th>
             </thead>
             <tbody>
                 <tr th:each="avviso: ${condominio.elenco_avvisi}">
                     <td th:text="${avviso.titolo}"></td>
                     <td th:text="${avviso.dataavviso}"></td>
-                    <td></td>
-                    <td></td>
                     <td> 
-                        <a th:href="@{/condomini/avvisi/} + ${avviso.idavviso}" class="btn btn-warning">
+                        <a th:href="@{/condomini/avvisi/} + ${avviso.idavviso}" class="btn btn-warning w-100">
                             Visualizza <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </td>
