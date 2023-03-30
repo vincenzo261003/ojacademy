@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Dashboard condominio</title>
+</head>
+<body>
+    <div class="container mt-3">
+        <div class="row">
+            <h1 th:text="${condominio.nome}"></h1>
+            <h5>Indirizzo: <span th:text="${condominio.indirizzo}"></span></h5>
+            <h5>Codice: <span th:text="${condominio.codice}"></span></h5>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-9">
+                <h1 class="mb-4">Lista inquilini</h1>
+            </div>
+            <div class="col-3">
+                <span th:if="${admin}"> 
+                    <a th:href="@{/condomini/utenti/aggiungi/} + ${condominio.codice}" class="btn btn-primary w-100">
+                        Aggiungi<i class="fa fa-solid fa-plus ms-3"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <th>Nominativo</th>
+                <th>Codice appartamento</th>
+                <th>Telefono</th>
+                <th>Email</th>
+                <th th:if="${admin}">Modifica</th>
+            </thead>
+            <tbody>
+                <tr th:each="utente: ${condominio.elenco_utenti}">
+                    <td th:text="${utente.nominativo}"></td>
+                    <td th:text="${utente.codiceappartamento}"></td>
+                    <td th:text="${utente.telefono}"></td>
+                    <td th:text="${utente.email}"></td>
+                    <td th:if="${admin}"> 
+                        <a th:href="@{/condomini/utenti/modifica/} + ${utente.codiceappartamento}" class="btn btn-warning">
+                            <i class="fa fa-solid fa-pencil"></i>
+                        </a>
+                        <a th:href="@{/condomini/utenti/elimina/} + ${utente.codiceappartamento}" class="btn btn-danger">
+                            <i class="fa fa-solid fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
