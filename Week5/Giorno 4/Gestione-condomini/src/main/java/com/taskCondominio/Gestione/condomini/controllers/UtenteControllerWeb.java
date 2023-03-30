@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-import com.taskCondominio.Gestione.condomini.dto.CondominioDto;
 import com.taskCondominio.Gestione.condomini.dto.UtenteDto;
 import com.taskCondominio.Gestione.condomini.services.CondominioService;
 import com.taskCondominio.Gestione.condomini.services.UtenteService;

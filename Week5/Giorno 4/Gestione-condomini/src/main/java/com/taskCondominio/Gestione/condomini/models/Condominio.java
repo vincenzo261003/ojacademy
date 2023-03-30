@@ -31,8 +31,19 @@ public class Condominio {
 	
 	@OneToMany(mappedBy = "condominio", fetch = FetchType.LAZY )
 	private List<Utente> elenco_utenti;
+	
+	@OneToMany(mappedBy = "condominio", fetch = FetchType.LAZY )
+	private List<Avviso> elenco_avvisi;
     
-    public Condominio() {}
+    public List<Avviso> getElenco_avvisi() {
+		return elenco_avvisi;
+	}
+
+	public void setElenco_avvisi(List<Avviso> elenco_avvisi) {
+		this.elenco_avvisi = elenco_avvisi;
+	}
+
+	public Condominio() {}
 
 	public Integer getIdcondominio() {
 		return idcondominio;

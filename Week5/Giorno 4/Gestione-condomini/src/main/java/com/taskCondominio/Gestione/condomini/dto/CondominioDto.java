@@ -2,12 +2,15 @@ package com.taskCondominio.Gestione.condomini.dto;
 
 import java.util.List;
 
+import com.taskCondominio.Gestione.condomini.models.Avviso;
+
 public class CondominioDto {
 
     private String indirizzo;
     private String nome;
     private String codice;
     private List<UtenteDto> elenco_utenti;
+    private List<Avviso> elenco_avvisi;
     
     public CondominioDto () {}
 
@@ -41,6 +44,14 @@ public class CondominioDto {
 
 	public void setElenco_utenti(List<UtenteDto> elenco_utenti) {
 		this.elenco_utenti = elenco_utenti;
+	}
+
+	public List<Avviso> getElenco_avvisi() {
+		return elenco_avvisi;
+	}
+
+	public void setElenco_avvisi(List<Avviso> elenco_avvisi) {
+		this.elenco_avvisi = elenco_avvisi;
 	}
 	
 }
