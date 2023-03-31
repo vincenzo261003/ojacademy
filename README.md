@@ -9,6 +9,7 @@ Risorse corso OJxSI(IBM) Full Stack
  - [Task ospedale v2 (DTO & Mapping)](https://github.com/vincenzo261003/ojacademy/tree/main/Week4/Giorno%203/Ospedale%20pt2) ❌
  - [Task00 ThymeLeaf](https://github.com/vincenzo261003/ojacademy/tree/main/Week4/Giorno%204/task00ThymeLeaf) ❌
  - [Task gestione palestra](https://github.com/vincenzo261003/ojacademy/tree/main/Week4/Giorno%205/GestionePalestra) ❌
+ - [Test gestione condomini](https://github.com/vincenzo261003/ojacademy/tree/main/Week5/Giorno%204) ✅
 
 ## Lista argomenti - da finire
  
@@ -40,3 +41,4 @@ Risorse corso OJxSI(IBM) Full Stack
 ### Thymeleaf 
  - [Primo test](https://github.com/vincenzo261003/ojacademy/tree/main/Week4/Giorno%204/task00ThymeLeaf)
  - [Task gestione palestra (TL+JPA)](https://github.com/vincenzo261003/ojacademy/tree/main/Week4/Giorno%205/GestionePalestra)
+ - [Test gestione condomini](https://github.com/vincenzo261003/ojacademy/tree/main/Week5/Giorno%204)
