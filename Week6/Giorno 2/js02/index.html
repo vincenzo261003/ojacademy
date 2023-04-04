@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css.css">
+  </head>
+<body>
+
+    <script src="js.js"></script>
+
+    <div class="container">
+        <h1>Controllo temperatura</h1>
+
+        <div class="form-group">
+            <label for="inputNome">Inserisci temperatura</label>
+            <input type="number" min="34" max="42" id="inputNome" class="form-control" placeholder="Inserisci valore">
+        </div>
+
+        <button type="button" class="btn btn-primary btn-block" onclick="controlla()">Controllo</button>        
+        <hr>
+
+        <h1>Risultato</h1>
+
+        <p id="risultato"></p>
+    
+    </div>
+</body>
+</html>
