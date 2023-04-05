@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Apri console</h1>
+
+    <input type="text" id="inputNome">
+    <br><br>
+
+    <button type="button" onclick="init()">Inizializza</button>
+    <button type="button" onclick="ret()">Restituisci</button>
+    <button type="button" onclick="del()">Elimina</button>
+    
+    <script>
+        function init(){
+            let nome = document.getElementById("inputNome").value;
+            localStorage.setItem("persona", nome);
+        }
+
+        function ret(){
+            console.log(localStorage.getItem("persona"));
+        }
+
+        function del(){
+            localStorage.removeItem("persona");
+        }
+    </script>
+
+</body>
+</html>

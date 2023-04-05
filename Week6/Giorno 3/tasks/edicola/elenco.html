@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Elenco articoli</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Edicola</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="elenco.html">Elenco</a>
+            </li>
+        </div>
+    </nav>
+
+    <div id="updatecontainer" class="container mt-2 d-none"></div>  
+
+    <div id="elencocontainer" class="container mt-2">
+        <h1>Elenco articoli</h1>
+        <table class="table table-striped mt-3">
+            <thead class="table-light">
+                <tr>
+                    <th>Codice</th>
+                    <th>Tipo</th>
+                    <th>Nome</th>
+                    <th>Descrizione</th>
+                    <th>Prezzo</th>
+                    <th>Opzioni</th>
+                </tr>
+            </thead>
+            <tbody id="tablebody">
+    
+            </tbody>
+        </table>
+    </div>
+
+    <script src="elenco.js"></script>
+</body>
+</html>

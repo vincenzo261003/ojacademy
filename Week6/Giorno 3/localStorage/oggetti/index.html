@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Apri console</h1>
+
+    <script>
+        // let persona = {
+        //     nome: "Prova",
+        //     cognome: "avorP",
+        //     eta: 20
+        // }
+        // localStorage.setItem("per", JSON.stringify(persona))
+
+        // let p = localStorage.getItem("per");
+        // console.log(JSON.parse(p))
+
+        // let elenco = [
+        //     {
+        //         nome: "Giovanni",
+        //         cognome: "Pace",
+        //         eta: 36
+        //     },
+        //     {
+        //         nome: "Mario",
+        //         cognome: "Rossi",
+        //         eta: 38,
+        //         data_nascita: "01/01/2022"
+        //     },
+        //     {
+        //         nome: "Valeria",
+        //         cognome: "Verdi",
+        //         eta: 42
+        //     },
+        //     {
+        //         nome: "Marika",
+        //         cognome: "Mariko",
+        //         eta: 25
+        //     },
+        // ]
+
+        // localStorage.setItem("elenco", JSON.stringify(elenco));
+
+        let elencoParsed = JSON.parse(localStorage.getItem("elenco"));
+        console.table(elencoParsed)
+    </script>
+</body>
+</html>
