@@ -64,6 +64,8 @@ public class StudenteService {
 		Studente temp = repository.findByCodice(cod).orElse(null);
 		if (temp == null)
 			return false;
+		c.setCaffe(temp.getCaffe());
+		c.setMoltiplicatori(temp.getMoltiplicatori());
 		Studente p = modelMapper.map(c, Studente.class);
 		p.setId(temp.getId());
 		if (repository.save(p) == null)
@@ -101,7 +103,7 @@ public class StudenteService {
 		StudenteDto temp = cercaStudenteCodice(varCodice);
 		if (temp == null)
 			return false;
-		temp.setCaffe(temp.getMoltiplicatori() + temp.getCaffe());
+		temp.setCaffe((temp.getMoltiplicatori() == 0 ? 1 : temp.getMoltiplicatori()) + temp.getCaffe());
 		temp.setMoltiplicatori(0);
 		return aggiornaStudenteCodice(varCodice, temp);
 	}
@@ -110,7 +112,7 @@ public class StudenteService {
 		StudenteDto temp = cercaStudenteCodice(varCodice);
 		if (temp == null)
 			return false;
-		temp.setCaffe(temp.getCaffe()-1);
+		temp.setCaffe(temp.getCaffe() == 0 ? 0 : temp.getCaffe()-1);
 		return aggiornaStudenteCodice(varCodice, temp);
 	}
 
@@ -126,7 +128,7 @@ public class StudenteService {
 		StudenteDto temp = cercaStudenteCodice(varCodice);
 		if (temp == null)
 			return false;
-		temp.setMoltiplicatori(temp.getMoltiplicatori()-1);
+		temp.setMoltiplicatori(temp.getMoltiplicatori() == 0 ? 0 : temp.getMoltiplicatori()-1);
 		return aggiornaStudenteCodice(varCodice, temp);
 	}
 	
