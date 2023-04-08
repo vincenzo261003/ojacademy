@@ -10,6 +10,8 @@ Risorse corso OJxSI(IBM) Full Stack
  - [Task00 ThymeLeaf](https://github.com/vincenzo261003/ojacademy/tree/main/Week4/Giorno%204/task00ThymeLeaf) ❌
  - [Task gestione palestra](https://github.com/vincenzo261003/ojacademy/tree/main/Week4/Giorno%205/GestionePalestra) ❌
  - [Test gestione condomini](https://github.com/vincenzo261003/ojacademy/tree/main/Week5/Giorno%204) ✅
+ - [Task JS no API (cronometro, timer, edicola con localStorage)](https://github.com/vincenzo261003/ojacademy/tree/main/Week6/Giorno%203/tasks) ✅
+ - [Task gestione caffé](https://github.com/vincenzo261003/ojacademy/tree/main/Week6/Giorno%204) ✅
 
 ## Lista argomenti - da finire
  
@@ -43,3 +45,10 @@ Risorse corso OJxSI(IBM) Full Stack
  - [Primo test](https://github.com/vincenzo261003/ojacademy/tree/main/Week4/Giorno%204/task00ThymeLeaf)
  - [Task gestione palestra (TL+JPA)](https://github.com/vincenzo261003/ojacademy/tree/main/Week4/Giorno%205/GestionePalestra)
  - [Test gestione condomini](https://github.com/vincenzo261003/ojacademy/tree/main/Week5/Giorno%204)
+ 
+### Javascript
+ - [Basi di JS](https://github.com/vincenzo261003/ojacademy/tree/main/Week6/Giorno%202)
+ - [Local Storage](https://github.com/vincenzo261003/ojacademy/tree/main/Week6/Giorno%203/localStorage)
+ - [Tasks cronometro, timer e gestione edicola](https://github.com/vincenzo261003/ojacademy/tree/main/Week6/Giorno%203/tasks)
+ - [jQuery e AJAX](https://github.com/vincenzo261003/ojacademy/tree/main/Week6/Giorno%204/jQuery)
+ - [Task gestione caffé](https://github.com/vincenzo261003/ojacademy/tree/main/Week6/Giorno%204)
