@@ -2,7 +2,7 @@
 
 Risorse corso OJxSI(IBM) Full Stack 
 
-## Elenco tasks - da fare
+## Elenco tasks
  - [Task libreria](https://github.com/vincenzo261003/ojacademy/tree/main/Week3/Giorno%203/Task01) ✅
  - [Task alberghi](https://github.com/vincenzo261003/ojacademy/tree/main/Week3/Giorno%204/Task02Alberghi) ✅
  - [Task ospedale v1](https://github.com/vincenzo261003/ojacademy/tree/main/Week4/Giorno%202/Task03) ✅
@@ -13,7 +13,7 @@ Risorse corso OJxSI(IBM) Full Stack
  - [Task JS no API (cronometro, timer, edicola con localStorage)](https://github.com/vincenzo261003/ojacademy/tree/main/Week6/Giorno%203/tasks) ✅
  - [Task gestione caffé](https://github.com/vincenzo261003/ojacademy/tree/main/Week6/Giorno%204) ✅
 
-## Lista argomenti - da finire
+## Lista argomenti
  
 ### Fondamenti Java e OOP
  - [Prima settimana - basi](https://github.com/vincenzo261003/ojacademy/tree/main/Week1)
