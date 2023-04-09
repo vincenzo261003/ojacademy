@@ -1,6 +1,6 @@
 # OJ Academy
 
-Risorse corso OJxSI(IBM) Full Stack 
+Risorse corso OJxSI(IBM) Full Stack dev
 
 ## Elenco tasks
  - [Task libreria](https://github.com/vincenzo261003/ojacademy/tree/main/Week3/Giorno%203/Task01) ✅
