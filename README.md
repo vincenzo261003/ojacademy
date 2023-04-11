@@ -40,6 +40,7 @@ Risorse corso OJxSI(IBM) Full Stack dev
  - [Refactor esercizio studente con DTO](https://github.com/vincenzo261003/ojacademy/tree/main/Week4/Giorno%203/SpringStudenteRefactor)
  - [Refactor task ospedale con DTO](https://github.com/vincenzo261003/ojacademy/tree/main/Week4/Giorno%203/Ospedale%20pt2)
  - [Rest controller recap + connessione a form esterno](https://github.com/vincenzo261003/ojacademy/tree/main/Week5/Giorno%202-3)
+ - [Cookie e sessioni](https://github.com/vincenzo261003/ojacademy/tree/main/Week4/Giorno%205/SpringCookieESessioni)
 
 ### Thymeleaf 
  - [Primo test](https://github.com/vincenzo261003/ojacademy/tree/main/Week4/Giorno%204/task00ThymeLeaf)
