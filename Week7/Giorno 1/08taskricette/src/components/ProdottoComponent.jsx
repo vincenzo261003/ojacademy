@@ -1,8 +1,8 @@
 import React from 'react';
 
 function ProdottoComponent(props) {
-    const {prodotto} = props;
-    const {nome, descrizione, quantita, udm} = prodotto;
+    const {prodotti} = props;
+    const {nome, descrizione, quantita, udm} = prodotti;
 
     return (
         <tr>
