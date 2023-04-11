@@ -57,3 +57,4 @@ Risorse corso OJxSI(IBM) Full Stack dev
  
 ### React
  - [Basi di React e Node](https://github.com/vincenzo261003/ojacademy/tree/main/Week7/Giorno%201/03componenti)
+ - [Task00 React ricette](https://github.com/vincenzo261003/ojacademy/tree/main/Week7/Giorno%201/08taskricette)
