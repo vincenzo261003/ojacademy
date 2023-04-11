@@ -12,6 +12,7 @@ Risorse corso OJxSI(IBM) Full Stack dev
  - [Test gestione condomini](https://github.com/vincenzo261003/ojacademy/tree/main/Week5/Giorno%204) ✅
  - [Task JS no API (cronometro, timer, edicola con localStorage)](https://github.com/vincenzo261003/ojacademy/tree/main/Week6/Giorno%203/tasks) ✅
  - [Task gestione caffé](https://github.com/vincenzo261003/ojacademy/tree/main/Week6/Giorno%204) ✅
+ - [Task00 React ricette](https://github.com/vincenzo261003/ojacademy/tree/main/Week7/Giorno%201/08taskricette) ✅
 
 ## Lista argomenti
  
@@ -53,3 +54,6 @@ Risorse corso OJxSI(IBM) Full Stack dev
  - [Tasks cronometro, timer e gestione edicola](https://github.com/vincenzo261003/ojacademy/tree/main/Week6/Giorno%203/tasks)
  - [jQuery e AJAX](https://github.com/vincenzo261003/ojacademy/tree/main/Week6/Giorno%204/jQuery)
  - [Task gestione caffé](https://github.com/vincenzo261003/ojacademy/tree/main/Week6/Giorno%204)
+ 
+### React
+ - [Basi di React e Node](https://github.com/vincenzo261003/ojacademy/tree/main/Week7/Giorno%201/03componenti)
