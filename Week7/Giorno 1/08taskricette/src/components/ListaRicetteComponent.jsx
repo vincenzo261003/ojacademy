@@ -3,7 +3,7 @@ import RicettaComponent from './RicettaComponent';
 
 const elenco = [
     {
-        nome: "Totilla",
+        nome: "Tortilla",
         prodotti: [
             {
                 nome: "Uova",
@@ -39,12 +39,9 @@ const elenco = [
 ]
 
 function ListaRicetteComponent(props) {
-    const {nome, elemento} = props;
-
     return (
         <div className='container mt-5'>
-            <h1>{nome}</h1>
-            {elenco.map((obj, idx) => <FlamerComponent key={idx} persona={obj} />)}
+            {elenco.map((obj, idx) => <RicettaComponent key={idx} ricetta={obj} />)}
         </div>
     );
 }

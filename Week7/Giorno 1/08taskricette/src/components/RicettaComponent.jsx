@@ -4,7 +4,13 @@ import ProdottoComponent from './ProdottoComponent';
 function RicettaComponent(props) {
     const ricetta = props;
 
+    const {nome, prodotti} = ricetta.ricetta;
+
+    console.log(prodotti)
+
     return (
+        <>
+        <h1 className='mt-4'>{nome}</h1>
         <table className="table table-striped">
             <thead>
                 <tr>
@@ -15,9 +21,10 @@ function RicettaComponent(props) {
                 </tr>
             </thead>
             <tbody>
-                {ricetta.map((obj, idx) => <ProdottoComponent key={idx} prodotto={obj} />)}
+                {prodotti.map((obj, idx) => <ProdottoComponent key={idx} prodotti={obj} />)}
             </tbody>
         </table>
+        </>
     );
 }
 
