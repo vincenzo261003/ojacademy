@@ -1,0 +1,34 @@
+Domanda 1) 
+
+Contenimento 
+Specializzazione
+Utilizzo
+
+Ereditarietà 
+Incapsulamento 
+Polimorfismo
+
+- Prima la programmazione era sequenziale e procedurale, con l'OOP oltre all'introduzione degli oggetti vengono introdotti i metodi
+
+- Gli oggetti sono contenitori etereogenei
+
+- Information hiding -> garantito dai modificatori di accesso (
+	public -> visibile da tutti
+	private -> visibile solo nella classe (no ereditarietà)
+	protected -> visibilità livello package
+)
+
+Domanda 4)
+
+L'oggetto è l'istanza della classe 
+
+
+Domanda 6)
+
+
+Concetto di polimorfismo)
+
+La capacità di una classe di cambiare il suo tipo in maniera dinamica a runtime
+
+Esempio:
+ArrayList di Persona che si trasforma in runtime nelle sue specializzazioni
