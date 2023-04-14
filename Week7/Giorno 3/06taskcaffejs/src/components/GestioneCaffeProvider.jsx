@@ -12,8 +12,8 @@ const GestioneCaffeProvider = ({children}) => {
                 aggiornaElenco(dati)
             })
             .catch(err => console.log(err))
-    } 
-
+    }
+ 
     const elimina = (varCodice) => {
         fetch("http://localhost:8080/caffe/" + varCodice, {
                 method: "DELETE"
