@@ -19,7 +19,7 @@ function App() {
         {/* <TestoComponent /> USE REF */}
         {/* <ElencoComponent /> ON CALLBACK */}
         {/* <GrandiArrayComponent/> USE MEMO */}
-        <OggettiComponent />
+        {/* <OggettiComponent /> USE REDUCER */}
       </div>
     </>
   );
