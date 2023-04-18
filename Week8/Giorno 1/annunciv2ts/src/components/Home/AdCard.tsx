@@ -22,10 +22,8 @@ const AdCard = (props: Ad) => {
                     </CardContent>
 
                     <CardActions>
-                        <Button size="small" color="primary">
-                            <Link href=`/detail/{props.codice}`>
-                                VISUALIZZA
-                            </Link>
+                        <Button size="small" color="primary" onClick={() => props.navigate("/detail/" + props.codice)}>
+                            VISUALIZZA
                         </Button>
                     </CardActions>
                 </CardActionArea>
