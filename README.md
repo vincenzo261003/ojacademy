@@ -13,6 +13,7 @@ Risorse corso OJxSI(IBM) Full Stack dev
  - [Task JS no API (cronometro, timer, edicola con localStorage)](https://github.com/vincenzo261003/ojacademy/tree/main/Week6/Giorno%203/tasks) ✅
  - [Task gestione caffé](https://github.com/vincenzo261003/ojacademy/tree/main/Week6/Giorno%204) ✅
  - [Task00 React ricette](https://github.com/vincenzo261003/ojacademy/tree/main/Week7/Giorno%201/08taskricette) ✅
+ - [Task finale gestione cinema](https://github.com/vincenzo261003/ojacademy/tree/main/Week8/Giorno%203/gestionecinema) ✅
 
 ## Lista argomenti
  
